@@ -11,7 +11,7 @@
 > Configura los roles
 
 - **this setVariable ["ACE_IsEngineer",1,true];** //1 0 2 para personaje Ingeniero
-- **this setVariable ["ACE_isEOD",1,true]; //Personaje Experto en Explosivos
+- **this setVariable ["ACE_isEOD",1,true];** //Personaje Experto en Explosivos
 - **this setVariable ["ace_medical_medicClass", 2, true];** //1 o 2 Personaje Medico
 - **this setVariable ["ACE_isRepairVehicle", 1, true];** //Vehiculo de Reparacion
 - **this setVariable ["ace_medical_medicClass",1, true];** //Vehiculo de Reparacion
