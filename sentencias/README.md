@@ -30,6 +30,7 @@ Todos estos parámetros son booleanos, es decir toman valores de **true** o **fa
  - **VCM_DisableForm**: Impide a VCOM cambiar la formación del grupo.
  - **VCM_Skilldisable**: Evita que VCOM cambie la skills de las unidades.
  
+ 
 	(group this) setVariable ["VCM_NOFLANK",true];
 	(group this) setVariable ["VCM_NORESCUE",true];
 	(group this) setVariable ["VCM_TOUGHSQUAD",true];
