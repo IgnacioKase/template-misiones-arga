@@ -58,18 +58,24 @@ MOVE: hace que la ai no se mueva ni gire regularmente.
 
 - [_box, true] call ace_arsenal_fnc_initBox;
 
+## Sentencia para Zeus:
 
+	_unit assignCurator _curatorModule;
+
+assignCurator debe ser ejecutada en el servidor para hacer efecto. Entonces si la mission esta corriendo en un servidor dedicado:
+
+	[_unit, _curatorModule] remoteExec ["assignCurator",2];
 
 ## Sentencias adicionales para Vehiculos.
 
 **Velocidad Maxima de Vehiculo por IA**
 
-- This limitspeed "Numero";
+- this limitspeed "Numero";
 
 
 **Banderas sobre vehiculo.**
 
-- This forceFlagTexture "\A3\Data_F\Flags\Flag_uno_CO.paa"; // [Mas texturas de banderas](https://community.bistudio.com/wiki/Flag_Textures)
+- this forceFlagTexture "\A3\Data_F\Flags\Flag_uno_CO.paa"; // [Mas texturas de banderas](https://community.bistudio.com/wiki/Flag_Textures)
 
 
 **Vehiculo sin transmision de daño para ocupantes:**
