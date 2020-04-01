@@ -2,8 +2,8 @@
                           Realizado por |ArgA|Ignacio
 *******************************************************************************/
 
-#define NAME "Op. "
-#define IMAGE ""                   // Si coloca imgs\ entre las comillas no necesitara el imgs\ en loadScreen ni overviewPicture
+#define NAME "Op. "                     // Colocar nombre de mision
+#define IMAGE "imgs\"                   // Colocar nombre y extension de la imagen de portada, ej "imgs\portada.jpg"
 #define DESCRIPTION ""
 
 author = "";                            // Editor
@@ -11,8 +11,8 @@ onLoadName = NAME;	                    // Nombre de carga
 briefingName = NAME;                    // Nombre en briefing
 onLoadMission = DESCRIPTION;            // Pie de carga
 overviewText = DESCRIPTION;             // Pie en seleccion de mision
-overviewPicture = IMAGE;                // Imagen en seleccion de mision, ej "imgs\portada.jpg"
-loadScreen = IMAGE;                     // Imagen en carga, ej "imgs\portada.jpg"
+overviewPicture = IMAGE;                // Imagen en seleccion de mision
+loadScreen = IMAGE;                     // Imagen en carga
 IMG_LOGO = "imgs\logo.paa"              // Nota: Las imagenes deberian estar en
 COLOR_AUTOR = "#76a8f7";                // formato .paa y en proporcion 2x1 (1024x512)
 ES_CAMPANIA = 0;                        // tamaño logo: 323px x 323px
