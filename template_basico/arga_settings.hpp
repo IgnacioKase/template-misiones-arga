@@ -4,7 +4,7 @@
 
 #define NAME "Op. "                     // Colocar nombre de mision
 #define IMAGE "imgs\"                   // Colocar nombre y extension de la imagen de portada, ej "imgs\portada.jpg"
-#define DESCRIPTION ""
+#define DESCRIPTION ""                  // Colocar descripcion de la mision entre las comillas
 
 author = "";                            // Editor
 onLoadName = NAME;	                    // Nombre de carga
