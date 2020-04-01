@@ -23,7 +23,7 @@ if((_extractodeInteligencia select 0) != "")then{
   player createDiaryRecord["Diary", ["Extracto de Inteligencia", ([_extractodeInteligencia, false] call MANDI_fnc_makeInfo)]];
 };
 
-if((_situacionHistorica select 0) != "")then{
+if((_mision select 0) != "")then{
   player createDiaryRecord["Diary", ["misi"+toString[243]+"n", ([_mision, false] call MANDI_fnc_makeInfo)]];
 };
 
