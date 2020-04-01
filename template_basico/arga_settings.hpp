@@ -3,7 +3,7 @@
 *******************************************************************************/
 
 #define NAME "Op. "
-#define IMAGE "imgs\"
+#define IMAGE ""                   // Si coloca imgs\ entre las comillas no necesitara el imgs\ en loadScreen ni overviewPicture
 #define DESCRIPTION ""
 
 author = "";                            // Editor
