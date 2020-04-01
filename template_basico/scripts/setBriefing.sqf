@@ -28,7 +28,7 @@ private _params = [
     parseSimpleArray _objectives, 
     parseSimpleArray _situation, 
     parseSimpleArray _intelligence,
-    parseSimpleArray _storySituation,
+    parseSimpleArray _mision,
     _info,
     _author
 ];
