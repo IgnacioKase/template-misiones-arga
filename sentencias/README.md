@@ -37,12 +37,12 @@ Configuración de roles
 ## Sentencias de VCOM:
 Todos estos parámetros son booleanos, es decir toman valores de **true** o **false**.
 	
-  **VCM_NOFLANK**: Impide a la IA de realizar movimientos avanzados, como el flanqueo.
-  **VCM_NORESCUE**: Evita que la IA acuda a los pedidos de refuerzo.
-  **VCM_TOUGHSQUAD**: Evita que la IA pida refuerzos.
-  **Vcm_Disable**: Desactiva la VCOM completamente en el grupo.
-  **VCM_DisableForm**: Impide a VCOM cambiar la formación del grupo.
-  **VCM_Skilldisable**: Evita que VCOM cambie la skills de las unidades. 
+ - **VCM_NOFLANK**: Impide a la IA de realizar movimientos avanzados, como el flanqueo.
+ - **VCM_NORESCUE**: Evita que la IA acuda a los pedidos de refuerzo.
+ - **VCM_TOUGHSQUAD**: Evita que la IA pida refuerzos.
+ - **Vcm_Disable**: Desactiva la VCOM completamente en el grupo.
+ - **VCM_DisableForm**: Impide a VCOM cambiar la formación del grupo.
+ - **VCM_Skilldisable**: Evita que VCOM cambie la skills de las unidades. 
 	
 	(group this) setVariable ["VCM_NOFLANK",true];
 	(group this) setVariable ["VCM_NORESCUE",true];
