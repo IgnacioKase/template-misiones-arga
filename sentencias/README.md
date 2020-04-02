@@ -1,3 +1,6 @@
+
+
+
 # Sentencias
 (en general se ubican en el Init de objeto/personaje)
 
@@ -5,92 +8,104 @@
 (#TODO: escribir explicación)
 > [Documentación oficial](https://community.bistudio.com/wiki/setVariable)
 
-
 ## Sentencias ACE
--Ingeniero / Exp en Explosivos / Medico / Instalaciones / Piloto (el mismo debe ser ingeniero a su vez)
-> Configura los roles
+Configuración de roles
 
-- **this setVariable ["ACE_IsEngineer",1,true];** //1 0 2 para personaje Ingeniero
-- **this setVariable ["ACE_isEOD",1,true];** //Personaje Experto en Explosivos
-- **this setVariable ["ace_medical_medicClass", 2, true];** //1 o 2 Personaje Medico
-- **this setVariable ["ACE_isRepairVehicle", 1, true];** //Vehiculo de Reparacion
-- **this setVariable ["ace_medical_medicClass",1, true];** //Vehiculo de Reparacion
-- **this setVariable ["ACE_isRepairFacility", 1, true];** //Edificio de Reparacion
+**ACE_IsEngineer:** Setea el rol de Ingeniero 
+**ACE_isEOD:** Setea el rol de Experto en Explosivos  
+**ace_medical_medicClass:** Setea el rol de  Médico
+**ACE_isRepairVehicle:** Setea el vehículo de reparación 
+**ace_medical_medicClass:** Setea el vehículo médico
+**ACE_isRepairFacility:** Setea un objeto de reparación 
+**ACE_GForceCoef:** Setea la reducción de la fuerza G
 
-- **this setVariable ["ACE_GForceCoef",0.4];** // De 1 a 0, reduce la Fuerza G, 0 desabilita la fuerza G del personaje.
-
+	this setVariable ["ACE_IsEngineer",1,true];
+	this setVariable ["ACE_isEOD",1,true];
+	this setVariable ["ace_medical_medicClass", 2, true];
+	this setVariable ["ACE_isRepairVehicle", 1, true];
+	this setVariable ["ace_medical_medicClass",1, true];
+	this setVariable ["ACE_isRepairFacility", 1, true];
+	this setVariable ["ACE_GForceCoef",0.4]; 
 
 ## Sentencias de VCOM:
 Todos estos parámetros son booleanos, es decir toman valores de **true** o **false**.
 	
- - **VCM_NOFLANK**: Impide a la IA de realizar movimientos avanzados, tales como el flanqueo.
- - **VCM_NORESCUE**: Evita que la IA acuda a los pedidos de refuerzo.
- - **VCM_TOUGHSQUAD**: Evita que la IA pida refuerzos.
- - **Vcm_Disable**: Desactiva la VCOM completamente en el grupo.
- - **VCM_DisableForm**: Impide a VCOM cambiar la formación del grupo.
- - **VCM_Skilldisable**: Evita que VCOM cambie la skills de las unidades. 
+  **VCM_NOFLANK**: Impide a la IA de realizar movimientos avanzados, como el flanqueo.
+  **VCM_NORESCUE**: Evita que la IA acuda a los pedidos de refuerzo.
+  **VCM_TOUGHSQUAD**: Evita que la IA pida refuerzos.
+  **Vcm_Disable**: Desactiva la VCOM completamente en el grupo.
+  **VCM_DisableForm**: Impide a VCOM cambiar la formación del grupo.
+  **VCM_Skilldisable**: Evita que VCOM cambie la skills de las unidades. 
 	
-		(group this) setVariable ["VCM_NOFLANK",true];
-		(group this) setVariable ["VCM_NORESCUE",true];
-		(group this) setVariable ["VCM_TOUGHSQUAD",true];
-		(group this) setVariable ["Vcm_Disable",true];
-		(group this) setVariable ["VCM_DisableForm",true];
-		(group this) setVariable ["VCM_Skilldisable",true];
+	(group this) setVariable ["VCM_NOFLANK",true];
+	(group this) setVariable ["VCM_NORESCUE",true];
+	(group this) setVariable ["VCM_TOUGHSQUAD",true];
+	(group this) setVariable ["Vcm_Disable",true];
+	(group this) setVariable ["VCM_DisableForm",true];
+	(group this) setVariable ["VCM_Skilldisable",true];
 
 ## IA inmovil
->(Tambien en ocupantes de vehiculos no le permite el movimiento)
 
-- this disableAI "move"; // this disableAI "PATH";
-> PATH: hace que la ai no se mueva pero gira para apuntarte.
-MOVE: hace que la ai no se mueva ni gire regularmente.
+**Move:** La ai no se mueva ni gire regularmente.
+**Path:** La ai no se mueva pero gira para apuntarte.
 
-
+	this disableAI "move";
+	this disableAI "path";
 
 ## Sentencias para Arsenales
 
-**Sentencia Arsenal Virtual**
+ **Sentencia Arsenal Virtual**
 
-- 0=["AmmoboxInit",[this,true]] spawn BIS_fnc_arsenal;
+	0=["AmmoboxInit",[this,true]] spawn BIS_fnc_arsenal;
 
 **Sentencia Arsenal ACE**
 
-- [_box, true] call ace_arsenal_fnc_initBox;
+	[_box, true] call ace_arsenal_fnc_initBox;
 
 ## Sentencia para Zeus:
 
 	_unit assignCurator _curatorModule;
 
-assignCurator debe ser ejecutada en el servidor para hacer efecto. Entonces si la mission esta corriendo en un servidor dedicado:
+assignCurator debe ser ejecutada en el servidor para hacer efecto. Entonces si la misión esta corriendo en un servidor dedicado:
 
 	[_unit, _curatorModule] remoteExec ["assignCurator",2];
 
-## Sentencias adicionales para Vehiculos.
+## Sentencias adicionales para Vehículos.
 
-**Velocidad Maxima de Vehiculo por IA**
+**Velocidad Máxima de Vehículo por IA**
 
-- this limitspeed "Numero";
-
-
-**Banderas sobre vehiculo.**
-
-- this forceFlagTexture "\A3\Data_F\Flags\Flag_uno_CO.paa"; // [Mas texturas de banderas](https://community.bistudio.com/wiki/Flag_Textures)
+	this limitspeed "Numero";
 
 
-**Vehiculo sin transmision de daño para ocupantes:**
+**Banderas sobre vehículo.**
 
-- this addEventHandler ["GetIn", {_unit = _this select 2; _unit allowDamage false;}]; this addEventHandler ["GetOut", {_unit = _this select 2; _unit allowDamage true;}];
+	this forceFlagTexture "\A3\Data_F\Flags\Flag_uno_CO.paa"; 
+
+[Mas texturas de banderas](https://community.bistudio.com/wiki/Flag_Textures)
+
+
+**Vehículo sin transmisión de daño para ocupantes:**
+
+	this addEventHandler ["GetIn", {_unit = _this select 2; _unit allowDamage false;}]; 
+	this addEventHandler ["GetOut", {_unit = _this select 2; _unit allowDamage true;}];
 
 
 
 ## Sentencias de Ambiente.
 
-**Sentencia textura cartel**
+**Imágenes en carteles**
 
-- this setObjectTextureGlobal [0,"Escudo1.jpg"];	
+Debe estar en carpeta de misión o subcarpeta imgs siendo "imgs/Escudo1.jpg"
 
- >La imagen no se ajusta automaticamente limite del objeto, debe estar en carpeta de mision o subcarpeta imgs siendo "imgs/Escudo1.jpg"**
+ 
+	this setObjectTextureGlobal [0,"Escudo1.jpg"];	
+    
+   >No funciona en objetos simples
+Tamaño recomendados 1024x512, 512x256 o cualquiera que respete el 2:1
 
+**Animación Ambiental Fija** 
+(Ojo, en servidor puede transportarse al spawnear de su posicion original la IA).
 
-**Animacion Ambiental Fija** 
->(Ojo, en servidor puede transportarse al spawnear de su posicion original la IA).
-- [this, "LISTEN_BRIEFING"] call BIS_fnc_ambientAnim;	// [Mas opciones](https://community.bistudio.com/wiki/BIS_fnc_ambientAnim)
+	[this, "LISTEN_BRIEFING"] call BIS_fnc_ambientAnim;	
+
+[Mas opciones](https://community.bistudio.com/wiki/BIS_fnc_ambientAnim)
