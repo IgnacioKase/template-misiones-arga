@@ -1,23 +1,23 @@
 # Indice
 
 - [Sentencia](#sentencias)
-- [Uso del comando setVariable](##uso-del-comando-"setVariable")
-- [Sentencias ACE](##Sentencias-ACE)
-- [Sentencias de VCOM](##Sentencias-de-VCOM)
-- [IA inmovil](##IA-inmovil)
-- [Sentencias para Arsenales](##Sentencias-para-Arsenales)
-- [Sentencia para Zeus](##Sentencia-para-Zeus)
-- [Sentencias adicionales para Vehículos](##Sentencias-adicionales-para-Vehículos)
-- [Sentencias de Ambiente](##Sentencias-de-Ambiente)
+- [Uso del comando setVariable](#uso-del-comando-"setVariable")
+- [Sentencias ACE](#Sentencias-ACE)
+- [Sentencias de VCOM](#Sentencias-de-VCOM)
+- [IA inmovil](#IA-inmovil)
+- [Sentencias para Arsenales](#Sentencias-para-Arsenales)
+- [Sentencia para Zeus](#Sentencia-para-Zeus)
+- [Sentencias adicionales para Vehículos](#Sentencias-adicionales-para-Vehículos)
+- [Sentencias de Ambiente](#Sentencias-de-Ambiente)
 
 # Sentencias
 (en general se ubican en el Init de objeto/personaje)
 
-## Uso del comando "setVariable"
+# Uso del comando "setVariable"
 (#TODO: escribir explicación)
 > [Documentación oficial](https://community.bistudio.com/wiki/setVariable)
 
-## Sentencias ACE
+# Sentencias ACE
 Configuración de roles
 
 **ACE_IsEngineer:** Setea el rol de Ingeniero 
@@ -36,7 +36,7 @@ Configuración de roles
 	this setVariable ["ACE_isRepairFacility", 1, true];
 	this setVariable ["ACE_GForceCoef",0.4]; 
 
-## Sentencias de VCOM
+# Sentencias de VCOM
 Todos estos parámetros son booleanos, es decir toman valores de **true** o **false**.
 	
   **VCM_NOFLANK**: Impide a la IA de realizar movimientos avanzados, como el flanqueo.
@@ -53,7 +53,7 @@ Todos estos parámetros son booleanos, es decir toman valores de **true** o **fa
 	(group this) setVariable ["VCM_DisableForm",true];
 	(group this) setVariable ["VCM_Skilldisable",true];
 
-## IA inmovil
+# IA inmovil
 
 **Move:** La ai no se mueva ni gire regularmente.
 **Path:** La ai no se mueva pero gira para apuntarte.
@@ -61,7 +61,7 @@ Todos estos parámetros son booleanos, es decir toman valores de **true** o **fa
 	this disableAI "move";
 	this disableAI "path";
 
-## Sentencias para Arsenales
+# Sentencias para Arsenales
 
  **Sentencia Arsenal Virtual**
 
@@ -71,7 +71,7 @@ Todos estos parámetros son booleanos, es decir toman valores de **true** o **fa
 
 	[_box, true] call ace_arsenal_fnc_initBox;
 
-## Sentencia para Zeus
+# Sentencia para Zeus
 
 	_unit assignCurator _curatorModule;
 
@@ -80,7 +80,7 @@ Si la misión esta corriendo en un servidor dedicado:
 
 	[_unit, _curatorModule] remoteExec ["assignCurator",2];
 
-## Sentencias adicionales para Vehículos
+# Sentencias adicionales para Vehículos
 
 **Velocidad Máxima de Vehículo por IA**
 
@@ -101,7 +101,7 @@ Si la misión esta corriendo en un servidor dedicado:
 
 
 
-## Sentencias de Ambiente
+# Sentencias de Ambiente
 
 **Imágenes en carteles**
 
