@@ -29,7 +29,7 @@ Configuración de roles
 **ACE_GForceCoef:** Setea la reducción de la fuerza G  
 
 	this setVariable ["ACE_IsEngineer",1,true];
-	this setVariable ["ACE_isEOD",1,true];
+	this setVariable ["ACE_isEOD",true,true];
 	this setVariable ["ace_medical_medicClass", 2, true];
 	this setVariable ["ACE_isRepairVehicle", 1, true];
 	this setVariable ["ace_medical_medicClass",1, true];
