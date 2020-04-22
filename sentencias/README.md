@@ -3,7 +3,7 @@
 - [Sentencia](#sentencias)
 - [Uso del comando "setVariable"](##uso-del-comando-"setVariable")
 - [Sentencias ACE](##-Sentencias-ACE)
-- [Sentencias de VCOM](##Sentencias-de-VCOM)
+- [Sentencias de VCOM](##-Sentencias-de-VCOM)
 - [Patrullas de VCOM](##-Patrullas-con-VCOM)
 - [IA inmovil](##IA-inmovil)
 - [Sentencias para Arsenales](##Sentencias-para-Arsenales)
