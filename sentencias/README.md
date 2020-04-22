@@ -56,7 +56,8 @@ Todos estos parámetros son booleanos, es decir toman valores de **true** o **fa
 	
 ## Patrullas con VCOM
 Colocar 1 waypoint para la patrulla, configurar el estado de modo de fuego y movimiento y colocar las siguientes sentencias en "Al Activarse" del waypoint:
-  **CBA_fnc_taskDefend**: La IA se repartira en edificios cercanos ocupandolos y manteniendo la posición
+
+  **CBA_fnc_taskDefend**: La IA se repartira en edificios cercanos ocupandolos y manteniendo la posición.
   **BIS_fnc_taskPatrol**: La IA creara automaticamente waypoint generando una patrulla dentro del radio proporcionado, en ejemplo es 500 mts
   
 	[this] call CBA_fnc_taskDefend;
