@@ -7,6 +7,7 @@ private _initialGoggles =  getMissionConfigValue ["GAFAS_INICIALES", ""];
 private _disableCustomLoadout =  getMissionConfigValue ["DESACTIVAR_EQUIPAMIENTO_PERSONALIZADO", 1];
 
 if(hasInterface)then{
+  setViewDistance _distanciaVision;
   [_distanciaVision, 800] execVM "scripts\dist_vis.sqf";
   [] execVM "scripts\3rdView Restrictions.sqf";
   waitUntil {time > 0};
