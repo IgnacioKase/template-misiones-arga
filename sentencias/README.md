@@ -12,6 +12,7 @@
 - [Sentencias de Ambiente](##Sentencias-de-Ambiente)
 
 # Sentencias
+
 (en general se ubican en el Init de objeto/personaje)
 
 ## Uso del comando "setVariable"
