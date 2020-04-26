@@ -7,7 +7,7 @@ private _date = getMissionConfigValue ["FECHA", ""];
 private _weather = getMissionConfigValue ["CLIMA", ""];
 private _location = getMissionConfigValue ["UBICACION", ""];
 private _situation = getMissionConfigValue ["SITUACION", "test"];
-private _storySituation = getMissionConfigValue ["SITUACION_HISTORICA", ""];
+private _mision = getMissionConfigValue ["MISION", ""];
 private _intelligence = getMissionConfigValue ["EXTRACTO_INTELIGENCIA", ""];
 private _objectives = getMissionConfigValue ["OBJETIVOS", []];
 private _loadout = getMissionConfigValue ["RECURSOS", []];
@@ -28,7 +28,7 @@ private _params = [
     parseSimpleArray _objectives, 
     parseSimpleArray _situation, 
     parseSimpleArray _intelligence,
-    parseSimpleArray _storySituation,
+    parseSimpleArray _mision,
     _info,
     _author
 ];
