@@ -2,27 +2,34 @@
                           Realizado por |ArgA|Ignacio
 *******************************************************************************/
 
-private _distanciaVision = getMissionConfigValue ["MAX_DIST_VISION", 2500];
+private _distanciaVision = getMissionConfigValue ["MAX_DIST_VISION", 4000];
 private _initialGoggles =  getMissionConfigValue ["GAFAS_INICIALES", ""];
 private _disableCustomLoadout =  getMissionConfigValue ["DESACTIVAR_EQUIPAMIENTO_PERSONALIZADO", 1];
+private _intro = getMissionConfigValue ["INTRO", 2];
 
-if(hasInterface)then{
-  setViewDistance _distanciaVision;
-  [_distanciaVision, 800] execVM "scripts\dist_vis.sqf";
-  [] execVM "scripts\3rdView Restrictions.sqf";
+if (hasInterface) then {
+  [_distanciaVision, 800] execVM "scripts\view_distance.sqf";
+  [] execVM "scripts\check_view.sqf";
   waitUntil {time > 0};
-  [] execVM "scripts\intro.sqf";
+  if (_intro == 1) then {
+    [] execVM "scripts\intro.sqf";
+  };
+  if (_intro == 2) then {
+    [] execVM "scripts\intro_2.sqf";
+  };
   removeGoggles player; //arga_rhs_pm_negro
   if(_initialGoggles != "")then{
     player addGoggles _initialGoggles;
   };
   private _isMedic = player getVariable ["ace_medical_medicClass", 0];
-  if(_isMedic > 0)then{
-    [player,"arga_ing_medico"] call BIS_fnc_setUnitInsignia
-  };
+  private _ing = if (_isMedic > 0) then { "arga_ing_medico" } else { "arga_ing_arga" };
+  [player,"arga_ing_medico"] call BIS_fnc_setUnitInsignia;
 };
 
 player action ["SwitchWeapon", player, player, 100];
+player disableAI "move";
+player setUnitPos "middle";
+enableEngineArtillery false;
 
 // Deshabilita las opciones de Cargar y Guardar Equipo en el arsenal
 if(_disableCustomLoadout == 1)then{

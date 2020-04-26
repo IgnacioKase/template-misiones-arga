@@ -8,6 +8,8 @@ setTerrainGrid 40;
 
 [] execVM "scripts\setBriefing.sqf";
 
+[] execVM "scripts\init_vcom_driving.sqf";
+
 /*******************************************************************************
                           Realizado por |ArgA|Ignacio
 *******************************************************************************/
