@@ -1,0 +1,3 @@
+[submodule "scripts-basicos"]
+	path = scripts-basicos
+	url = https://github.com/IgnacioKase/template-basico.git
