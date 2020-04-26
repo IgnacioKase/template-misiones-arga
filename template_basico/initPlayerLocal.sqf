@@ -17,7 +17,7 @@ if(hasInterface)then{
   };
   private _isMedic = player getVariable ["ace_medical_medicClass", 0];
   if(_isMedic > 0)then{
-    [player,"arga_ing_medico"] call BIS_fnc_setUnitInsignia
+    [player,"arga_ing_medico"] call BIS_fnc_setUnitInsignia;
   };
 };
 
