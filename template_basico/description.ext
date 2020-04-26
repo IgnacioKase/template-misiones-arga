@@ -36,6 +36,26 @@ class CfgFunctions {
       };
     };
   };
+  class VCOM {
+    class general {
+      class isDriver{
+        file = "functions\fnc_isDriver.sqf";
+      };
+      class vehicleDetection{
+        file = "functions\fnc_vehicleDetection.sqf";
+      };
+    };
+  };
+};
+
+class CfgSounds {
+	sounds[] = {};
+  class effect_intro
+	{
+	name = "effect_intro";
+	sound[] = {"sounds\effect_intro.ogg", 1, 1};
+	titles[] = {};
+	};
 };
 
 /*******************************************************************************

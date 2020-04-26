@@ -11,12 +11,16 @@ private _spotTime = getMissionConfigValue ["SPOT_TIME", 0.5];
 private _courage = getMissionConfigValue ["COURAGE", 0.25];
 private _reloadSpeed = getMissionConfigValue ["RELOAD_SPEED", 0.25];
 private _commanding = getMissionConfigValue ["COMMANDING", 0.75];
+private _disbleGroupIA = getMissionConfigValue ["DESACTIVAR_IA_DE_GRUPO", 1];
+private _disableBluforIA = getMissionConfigValue ["DESACTIVAR_TODO_BLUFOR", 0];
 
-[] execVM "scripts\del_terrain.sqf";
+//[] execVM "scripts\fuera_luces.sqf";
+
 if(_customSkillsIA == 1)then{
     {
         if (!(isPlayer  _x))then
         {
+            (group _x) setVariable ["VCM_Skilldisable",true];
             _x setSkill ["aimingAccuracy", _aimingAccuracy];
             _x setSkill ["aimingShake", _aimingShake];
             _x setSkill ["aimingSpeed", _aimingSpeed];
@@ -27,6 +31,27 @@ if(_customSkillsIA == 1)then{
             _x setSkill ["commanding", _commanding];
         }
     }forEach allUnits;
+};
+
+// Deshabilita el movimiento de la IA para todas las IA que 
+// esten en el mismo grupo que un jugador humano
+if(_disbleGroupIA == 1)then{
+    {
+        private _group = (group _x);
+        {
+            _x disableAI "move";
+            _x setUnitPos "middle";
+        } forEach units _group;     
+    } forEach allPlayers;
+};
+
+if(_disableBluforIA == 1)then{
+  {
+    if(side _x == west)then{
+      _x disableAI "move";
+      _x setUnitPos "middle";
+    };
+  }foreach allUnits;
 };
 
 /*******************************************************************************

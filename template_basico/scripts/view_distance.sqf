@@ -6,21 +6,19 @@ private _defaultDistance = _this select 0;
 private _inAreaDistance = _this select 1;
 private _color = "Vacio";
 private _inArea = false;
+private _inAircraft = false;
+private _maxDistance = 10000;
+private _vehiclePlayer = false;
 
-try {
-    if (getMarkerType "vision" == "Empty") then {
-       _color = (getMarkerColor "vision");
-    }
-    else {
-        if (isServer) then {
-            systemChat "No se encontro marcador con color de ejemplo. El mismo deberia llevar de nombre de variable: vision. Ademas debe ser tipo Empty";
-        };
+setViewDistance _defaultDistance;
+
+if (getMarkerType "vision" != "Empty") exitWith {
+    if (isServer) then  {
+        systemChat "No se encontro marcador con color de ejemplo. El mismo deberia llevar de nombre de variable: vision. Ademas debe ser tipo Empty";
     };
 };
 
-if(_color == "Vacio")then{
-    exit;
-};
+ _color = (getMarkerColor "vision");
 
 {
     if ((getMarkerType _x != "Empty") && ((getMarkerColor _x) == _color)) then {
@@ -30,23 +28,31 @@ if(_color == "Vacio")then{
 
 while {true} do {
     _inArea = false;
-
-    {
-        if ((getMarkerType _x != "Empty") && ((getMarkerColor _x) == _color) && !_inArea) then {
-            if (player inArea _x)then{
-                _inArea = ((getPos player) select 2) < 20;
+    _inAircraft = false;
+    if( !(isNull objectParent player) ) then {
+        _vehiclePlayer = vehicle player;
+        _inAircraft = _vehiclePlayer isKindOf "Helicopter" || _vehiclePlayer isKindOf "Plane";
+    };
+    if (!_inAircraft) then {
+        {
+            if ((getMarkerType _x != "Empty") && ((getMarkerColor _x) == _color) && !_inArea) then {
+                if (player inArea _x)then{
+                    _inArea = ((getPos player) select 2) < 20;
+                };
             };
+        } forEach allMapMarkers;
+
+        if (viewDistance == _defaultDistance && _inArea) then {
+            setViewDistance _inAreaDistance;
         };
-    } forEach allMapMarkers;
 
-    if (viewDistance == _defaultDistance && _inArea) then {
-        setViewDistance _inAreaDistance;
+        if (viewDistance == _inAreaDistance && !_inArea) then {
+            setViewDistance _defaultDistance;
+        };
     };
-
-    if (viewDistance == _inAreaDistance && !_inArea) then {
-        setViewDistance _defaultDistance;
+    if (viewDistance != _maxDistance && _inAircraft) then {
+        setViewDistance _maxDistance;
     };
-    
     sleep 5;
 };
 
