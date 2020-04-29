@@ -1,5 +1,5 @@
 /*
-          Extero encontrado por: Vultur
+          Externo encontrado por: Vultur
 */
 
 ////Create New House Markers
