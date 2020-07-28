@@ -134,94 +134,94 @@ Tamaño recomendados 1024x512, 512x256 o cualquiera que respete el 2:1
 
 
 ## Roles permitidos
-Líder
-Sub Líder
-Líder Pelotón
-Ametrallador m240
-Ametrallador m249
-Granadero
-Granadero bengalas
-Lanzador AT
-Lanzador AA
-Tirador fal
-Tirador mk11
-Francotirador
-Ingeniero
-Observador
-Piloto
-Radio operador
-Médico
-Médico de combate
-Enfermero
-Fusilero
-Fusilero RA
-Entrenamiento
-Desconocido
+	Líder
+	Sub Líder
+	Líder Pelotón
+	Ametrallador m240
+	Ametrallador m249
+	Granadero
+	Granadero bengalas
+	Lanzador AT
+	Lanzador AA
+	Tirador fal
+	Tirador mk11
+	Francotirador
+	Ingeniero
+	Observador
+	Piloto
+	Radio operador
+	Médico
+	Médico de combate
+	Enfermero
+	Fusilero
+	Fusilero RA
+	Entrenamiento
+	Desconocido
 
 ## Nombres alternativos permitidos y su conversión al rol correspondiente
-Cacique			Líder
-Capitan			Líder
-Lider			Líder
-teniente		Sub Líder
-Teniente ¹		Sub Líder
-Teniente Primero	Sub Líder
-Sub Lider		Sub Líder
-Pampa			Sub Líder
-SubLider		Sub Líder
-Sub Comandante		Sub Líder
-Lider de Escuadra	Líder Pelotón
-Lider Sombra		Líder Pelotón
-Matrero			Líder Pelotón
-Lider-Tirador		Líder Pelotón
-Líder de Escuadra 1	Líder Pelotón
-Líder de Escuadra 2	Líder Pelotón
-Líder de Escuadra 3	Líder Pelotón
-Líder de Peloton	Líder Pelotón
-Ametrallador 762	Ametrallador m240
-Fusilero Automático	Ametrallador m240
-Ametrallador		Ametrallador m249
-Ametrallador 556	Ametrallador m249
-Granadero		Granadero
-Anti Tanque		Lanzador AT
-AT			Lanzador AT
-Fusilero AT		Lanzador AT
-AA			Lanzador AA
-Fusilero AA		Lanzador AA
-Tirador Designado CP	Tirador fal
-Tirador			Tirador mk11
-Tirador Designado	Tirador mk11
-Ingeniero		Ingeniero
-Sombra Especialista	Ingeniero
-Piloto			Piloto
-Radio operador		Radio operador
-Fusilero Ro		Radio operador
-Medico			Médico
-Sombra Medico		Médico
-Enfermero		Enfermero
-Fusilero		Fusilero
-Sombra			Fusilero
-Fusilero R/A		Fusilero RA
-Soldado			Entrenamiento
-Cabo Primero		Entrenamiento
-Instructor		Entrenamiento
-Soldado Primero		Entrenamiento
-Cabo			Entrenamiento
-Recluta			Entrenamiento
-Sargento Primero	Entrenamiento
-Aspirante		Entrenamiento
-Comandante		Entrenamiento
-Sargento		Entrenamiento
-PRUEBA 1		Entrenamiento
-PRUEBA 2		Entrenamiento
-Teniente¹		Entrenamiento
-Medico de Combate	Entrenamiento
-Aprendiz		Entrenamiento
-Sub Instructor		Entrenamiento
-Cabo Condor		Entrenamiento
-Cabo Yaguar		Entrenamiento
-Civil			Entrenamiento
-Supervisor		Entrenamiento
-Sargento Yaguar		Entrenamiento
-Sub Encargado		Entrenamiento
-PRUEBA 3		Desconocido
-any			Desconocido
+	Cacique			Líder
+	Capitan			Líder
+	Lider			Líder
+	teniente		Sub Líder
+	Teniente ¹		Sub Líder
+	Teniente Primero	Sub Líder
+	Sub Lider		Sub Líder
+	Pampa			Sub Líder
+	SubLider		Sub Líder
+	Sub Comandante		Sub Líder
+	Lider de Escuadra	Líder Pelotón
+	Lider Sombra		Líder Pelotón
+	Matrero			Líder Pelotón
+	Lider-Tirador		Líder Pelotón
+	Líder de Escuadra 1	Líder Pelotón
+	Líder de Escuadra 2	Líder Pelotón
+	Líder de Escuadra 3	Líder Pelotón
+	Líder de Peloton	Líder Pelotón
+	Ametrallador 762	Ametrallador m240
+	Fusilero Automático	Ametrallador m240
+	Ametrallador		Ametrallador m249
+	Ametrallador 556	Ametrallador m249
+	Granadero		Granadero
+	Anti Tanque		Lanzador AT
+	AT			Lanzador AT
+	Fusilero AT		Lanzador AT
+	AA			Lanzador AA
+	Fusilero AA		Lanzador AA
+	Tirador Designado CP	Tirador fal
+	Tirador			Tirador mk11
+	Tirador Designado	Tirador mk11
+	Ingeniero		Ingeniero
+	Sombra Especialista	Ingeniero
+	Piloto			Piloto
+	Radio operador		Radio operador
+	Fusilero Ro		Radio operador
+	Medico			Médico
+	Sombra Medico		Médico
+	Enfermero		Enfermero
+	Fusilero		Fusilero
+	Sombra			Fusilero
+	Fusilero R/A		Fusilero RA
+	Soldado			Entrenamiento
+	Cabo Primero		Entrenamiento
+	Instructor		Entrenamiento
+	Soldado Primero		Entrenamiento
+	Cabo			Entrenamiento
+	Recluta			Entrenamiento
+	Sargento Primero	Entrenamiento
+	Aspirante		Entrenamiento
+	Comandante		Entrenamiento
+	Sargento		Entrenamiento
+	PRUEBA 1		Entrenamiento
+	PRUEBA 2		Entrenamiento
+	Teniente¹		Entrenamiento
+	Medico de Combate	Entrenamiento
+	Aprendiz		Entrenamiento
+	Sub Instructor		Entrenamiento
+	Cabo Condor		Entrenamiento
+	Cabo Yaguar		Entrenamiento
+	Civil			Entrenamiento
+	Supervisor		Entrenamiento
+	Sargento Yaguar		Entrenamiento
+	Sub Encargado		Entrenamiento
+	PRUEBA 3		Desconocido
+	any			Desconocido
