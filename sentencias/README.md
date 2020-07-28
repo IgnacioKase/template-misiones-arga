@@ -10,8 +10,8 @@
 - [Sentencia para Zeus](##Sentencia-para-Zeus)
 - [Sentencias adicionales para Vehículos](##Sentencias-adicionales-para-Vehículos)
 - [Sentencias de Ambiente](##Sentencias-de-Ambiente)
-- [Roles permitidos](##Roles permitidos)
-- [Nombres alternativos permitidos y su conversión al rol correspondiente](##Nombres alternativos permitidos y su conversión al rol correspondiente)
+- [Roles permitidos](##Roles-permitidos)
+- [Nombres alternativos permitidos y su conversión al rol correspondiente](##Nombres-alternativos-permitidos-y-su-conversión-al-rol-correspondiente)
 
 
 # Sentencias
