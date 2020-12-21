@@ -15,7 +15,7 @@ al_mortar_flare_range = 400;
 publicvariable "al_mortar_flare_range";
 
 // If you want to use FLARE FIX do not edit or remove lines bellow
-player addEventHandler ["Fired",{private ["_al_flare"]; _al_flare = _this select 6;[[_al_flare],"AL_flare_fix\al_flare_enhance.sqf"] remoteExec ["execVM",0,true]}];
+player addEventHandler ["Fired",{private ["_al_flare"]; _al_flare = _this select 6;[[_al_flare],"scripts\AL_flare_fix\al_flare_enhance.sqf"] remoteExec ["execVM",0,true]}];
 
 // FOR vanilla mortars place this line inside their init field.
-// this addEventHandler ["Fired",{private ["_al_flare"]; _al_flare = _this select 6;[[_al_flare],"AL_flare_fix\al_flare_enhance.sqf"] remoteExec ["execVM",0,true]}];
+// this addEventHandler ["Fired",{private ["_al_flare"]; _al_flare = _this select 6;[[_al_flare],"scripts\AL_flare_fix\al_flare_enhance.sqf"] remoteExec ["execVM",0,true]}];

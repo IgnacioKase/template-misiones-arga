@@ -2,7 +2,7 @@
 
 Script para disparar morteros automaticamente
 
-
+Copiar a la carpeta scripts el archivo settings_mortero.sqf y la carpeta NEKY_Mortars
 
 ## Instrucciones
 
@@ -18,13 +18,13 @@ https://www.youtube.com/watch?v=lC_Re0DEJFI
 
 [nombre_mortero, thisList, "Tipo_ronda", "densidad_de_disparo", es_auto, distancia_minima, distancia_maxima] execVM "scripts\mortero.sqf";
 
-nombre_mortero: Nombre de la variable del mortero. Se coloca en el editor
-thisList: se deja así
-Tipo_ronda: "Sh_82mm_AMOS", "Sh_120mm_HE", "Sh_155mm_AMOS", "Smoke_120mm_AMOS_White", "F_40mm_White"
-densidad_de_disparo: "sporadic", "precise", "barrage", "guided","screen","safe"
-es_auto: true o false
-distancia_minima: mínimo rango donde dispara el mortero
-distancia_maxima: máximo rango donde dispara el mortero
+* nombre_mortero: Nombre de la variable del mortero. Se coloca en el editor
+* thisList: se deja así
+* Tipo_ronda: "Sh_82mm_AMOS", "Sh_120mm_HE", "Sh_155mm_AMOS", "Smoke_120mm_AMOS_White", "F_40mm_White"
+* densidad_de_disparo: "sporadic", "precise", "barrage", "guided","screen","safe"
+* es_auto: true o false
+* distancia_minima: mínimo rango donde dispara el mortero
+* distancia_maxima: máximo rango donde dispara el mortero
 
 
 ## Ejemplos llamadas
