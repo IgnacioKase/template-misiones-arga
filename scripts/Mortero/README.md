@@ -2,7 +2,7 @@
 
 Script para disparar morteros automaticamente
 
-Copiar a la carpeta scripts el archivo settings_mortero.sqf y la carpeta NEKY_Mortars
+Copiar a la carpeta scripts el archivo **settings_mortero.sqf** y la carpeta **NEKY_Mortars**
 
 ## Instrucciones
 
