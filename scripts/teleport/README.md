@@ -1,6 +1,6 @@
 # Teleport
 
-Script para teletranportar tropa de un lugar a otro en misiones que se quiere comenzar en un lugar determinado y se quiere planificar en misión,  permititiendo la entrada de jugadores en un período anterior al comienzo de la misión.
+Script para teletranportar tropa de un lugar a otro en misiones que se quiere comenzar en un lugar determinado y se quiere planificar en misión, permititiendo la entrada de jugadores en un período anterior al comienzo de la misión.
 
 Copiar a la carpeta scripts la carpeta **teleport**
 
